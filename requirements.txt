@@ -1,0 +1,10 @@
+Flask
+flask-cors
+tensorflow-cpu==2.16.1
+numpy
+Pillow
+requests
+groq
+gunicorn
+python-dotenv
+gdown
