@@ -1,4 +1,5 @@
 FROM python:3.10-slim
+
 WORKDIR /app
 
 COPY requirements.txt /app/
@@ -7,8 +8,8 @@ RUN pip install -r requirements.txt
 
 COPY . /app/
 
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_ENV=development
+# Expose port 80 untuk Claw Cloud
+EXPOSE 80
 
-CMD ["flask", "run"]
+# Jalankan langsung dengan python (bukan flask run)
+CMD ["python", "app.py"]
